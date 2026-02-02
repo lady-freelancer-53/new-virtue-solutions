@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography test</title>
+
+    <!-- Fonts (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@700&family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+<!-- Phone input -->
+<link   rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.5.0/build/css/intlTelInput.css"
+/>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.5.0/build/js/intlTelInput.min.js"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="./js/contact-form.js"></script>
+
+<script src="./js/main.js"></script>
+
+  </head>
+
+  <body>
+  <header class="site-header" id="site-header">
+  <div class="container">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html" aria-label="Home">
+        <img class="site-header__logo-image" src="./images/logo.svg" alt="NVS" />
+      </a>
+
+      <!-- Desktop nav (как было) -->
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link site-header__nav-link--active" href="#">Home</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#">Services</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#">About Us</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#">Approach</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#">Geography</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+
+        <div class="site-header__actions">
+          <a class="site-header__icon-link" href="#" aria-label="Telegram">
+            <img src="./images/icons/icon-telegram-white.svg" alt="" />
+          </a>
+          <a class="site-header__icon-link" href="#" aria-label="WhatsApp">
+            <img src="./images/icons/icon-whatsapp-white.svg" alt="" />
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile burger -->
+      <button class="site-header__burger" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="site-header__burger-line"></span>
+        <span class="site-header__burger-line"></span>
+        <span class="site-header__burger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile overlay + panel -->
+  <div class="site-header__overlay" data-menu-close></div>
+
+  <div class="site-header__panel" id="mobile-menu" aria-label="Mobile menu">
+    <button class="site-header__close" type="button" aria-label="Close menu" data-menu-close>
+      <span class="site-header__close-line"></span>
+      <span class="site-header__close-line"></span>
+    </button>
+
+    <ul class="site-header__mobile-list">
+      <li><a class="site-header__mobile-link site-header__mobile-link--active" href="#">Home</a></li>
+      <li><a class="site-header__mobile-link" href="#">Services</a></li>
+           <li><a class="site-header__mobile-link" href="#">About Us</a></li>
+      <li><a class="site-header__mobile-link" href="#">Approach</a></li>
+            <li><a class="site-header__mobile-link" href="#">Geography</a></li>
+      <li><a class="site-header__mobile-link" href="#">Contacts</a></li>
+    </ul>
+
+    <div class="site-header__mobile-actions">
+      <a class="site-header__icon-link" href="#" aria-label="Telegram">
+       <img src="./images/icons/icon-telegram-white.svg" alt="" />
+      </a>
+      <a class="site-header__icon-link" href="#" aria-label="WhatsApp">
+        <img src="./images/icons/icon-whatsapp-white.svg" alt="" />
+      </a>
+    </div>
+  </div>
+</header>
+<section class="hero" id="home">
+  <div class="hero__media" aria-hidden="true">
+    <img
+      src="./images/hero-ship.png"
+      alt=""
+      class="hero__image"
+    />
+  </div>
+
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">NEW VIRTUE SOLUTIONS</h1>
+
+        <p class="hero__subtitle">Shipbrokering &amp; Maritime Advisory</p>
+
+        <div class="hero__text">
+          <p>Independent shipbrokering and consulting across global maritime markets.</p>
+          <p>
+            We support transactions, strategic decisions, and complex maritime projects with discretion,
+            precision, and senior-level involvement.
+          </p>
+        </div>
+
+        <a class="button hero__button" href="#contacts">Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="benefits">
+  <div class="container">
+    <div class="benefits__grid">
+      <article class="benefits__card">
+        <div class="benefits__icon">
+          <img src="./images/icons/icon-ben-1.png" alt="" />
+        </div>
+        <h3 class="benefits__title">Boutique Maritime Advisory</h3>
+        <p class="benefits__text">
+          NVS is a specialized maritime advisory and shipbrokering firm working with a global network of shipowners, charterers, operators, and investors.
+        </p>
+      </article>
+
+      <article class="benefits__card">
+        <div class="benefits__icon">
+          <img src="./images/icons/icon-ben-2.png" alt="" />
+        </div>
+        <h3 class="benefits__title">Global Industry Expertise</h3>
+        <p class="benefits__text">
+          We support clients worldwide, combining deep market knowledge with hands-on experience across diverse maritime sectors and regions.
+        </p>
+      </article>
+
+      <article class="benefits__card">
+        <div class="benefits__icon">
+          <img src="./images/icons/icon-ben-3.png" alt="" />
+        </div>
+        <h3 class="benefits__title">Transactions &amp; Complex Mandates</h3>
+        <p class="benefits__text">
+          Our team advises on ship sale and purchase, chartering mandates, and complex, non-standard maritime situations requiring tailored solutions.
+        </p>
+      </article>
+
+      <article class="benefits__card">
+        <div class="benefits__icon">
+          <img src="./images/icons/icon-ben-4.png" alt="" />
+        </div>
+        <h3 class="benefits__title">Trusted Strategic Partner</h3>
+        <p class="benefits__text">
+          Beyond execution, we act as long-term advisors, guiding clients through the full decision-making process with discretion, clarity, and confidence.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta__overlay"></div>
+
+  <div class="container">
+    <div class="cta__content">
+      <div class="cta__logo">
+        <img src="./images/logo-mark.svg" alt="" />
+      </div>
+
+      <h2 class="cta__title">NEW VIRTUE SOLUTIONS</h2>
+      <p class="cta__subtitle">Shipbrokering &amp; Advisory</p>
+
+      <a href="#contacts" class="button cta__button">
+        Contact us
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="services__title">What We Do</h2>
+
+    <div class="services__slider js-services-slider">
+      <a class="service-card" href="service-shipbrokering.html  ">
+        <div class="service-card__media">
+          <img src="./images/services/shipbrokering.png" alt="Shipbrokering" />
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Shipbrokering</h3>
+          <p class="service-card__text">
+            We support ship sale and purchase transactions, chartering mandates, and
+            newbuilding-related projects across a range of vessel segments and market
+            conditions. Our focus is on disciplined execution, clear positioning, and
+            controlled negotiation.
+          </p>
+        </div>
+      </a>
+
+      <a class="service-card" href="service-advisory.html">
+        <div class="service-card__media">
+          <img src="./images/services/advisory.png" alt="Advisory & Consulting" />
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Advisory &amp; Consulting</h3>
+          <p class="service-card__text">
+            We provide strategic and transactional advisory tailored to ownership
+            structures, investment strategies, and operational realities. This includes
+            asset advisory, market intelligence, transaction structuring, and
+            coordination across jurisdictions.
+          </p>
+        </div>
+      </a>
+
+      <a class="service-card" href="service-shipbrokering.html">
+        <div class="service-card__media">
+          <img src="./images/services/strategic.png" alt="Strategic & Project Support" />
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">Strategic &amp; Project Support</h3>
+          <p class="service-card__text">
+            For complex or non-standard mandates, we assist clients with market entry
+            strategies, fleet positioning, special situations, and high-level
+            negotiations requiring discretion and experience.
+          </p>
+        </div>
+      </a>
+
+      
+    </div>
+  </div>
+</section>
+
+<section class="case-block">
+  <div class="container">
+    <h2 class="case-block__title">Strategic &amp; Project Support</h2>
+
+    <div class="case-block__card">
+      <div class="case-block__image">
+        <img src="./images/services/strategic-full.png" alt="Port cranes and container ship" />
+      </div>
+
+      <div class="case-block__bottom">
+        <div class="case-block__left">
+          <p class="case-block__lead">
+            We provide strategic and transactional advisory aligned with ownership objectives
+            and market conditions.
+          </p>
+        </div>
+
+        <div class="case-block__right">
+          <div>
+            <p class="case-block__label">This may include:</p>
+
+          <ul class="case-block__list">
+            <li>Market entry and expansion strategies</li>
+            <li>Fleet optimisation and repositioning</li>
+            <li>Special situations and distressed scenarios</li>
+            <li>High-level negotiations and stakeholder coordination</li>
+          </ul>
+
+          <p class="case-block__note">
+            We support clients where experience and judgment are critical.
+          </p>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="approach" id="approach">
+  <div class="container">
+    <h2 class="approach__title">Our Approach</h2>
+
+    <p class="approach__text">
+      We operate as a boutique firm by design. This allows us to remain selective, focused,
+      and directly involved in every mandate.
+    </p>
+
+    <p class="approach__lead">Our work is built on:</p>
+
+    <div class="approach__grid">
+      <article class="approach-card">
+        <div class="approach-card__icon">
+          <img src="./images/icons/idea.svg" alt="" />
+        </div>
+        <h3 class="approach-card__title">Senior-level<br />engagement</h3>
+      </article>
+
+      <article class="approach-card">
+        <div class="approach-card__icon">
+          <img src="./images/icons/idea.svg" alt="" />
+        </div>
+        <h3 class="approach-card__title">Discretion and<br />confidentiality</h3>
+      </article>
+
+      <article class="approach-card">
+        <div class="approach-card__icon">
+          <img src="./images/icons/idea.svg" alt="" />
+        </div>
+        <h3 class="approach-card__title">Clear alignment with<br />client objectives</h3>
+      </article>
+
+      <article class="approach-card">
+        <div class="approach-card__icon">
+          <img src="./images/icons/idea.svg" alt="" />
+        </div>
+        <h3 class="approach-card__title">Long-term relationships<br />over transactional volume</h3>
+      </article>
+    </div>
+
+    <p class="approach__footer">We prioritise outcomes over activity.</p>
+  </div>
+</section>
+
+<section class="coverage" id="coverage">
+  <div class="container">
+    <h2 class="coverage__title">Global Coverage</h2>
+
+    <div class="coverage__wrap">
+      <div class="coverage__grid">
+        <article class="coverage-card coverage-card--left">
+          <p class="coverage-card__big">
+            NVS works across international maritime markets, supporting transactions and advisory mandates worldwide.
+          </p>
+        </article>
+
+        <article class="coverage-card coverage-card--right">
+          <div class="card--content-wrap">
+            <p class="coverage-card__text">
+            Our experience spans multiple jurisdictions, regulatory environments, and commercial cultures, allowing us
+            to operate effectively in cross-border and multi-market contexts.
+          </p>
+
+          <p class="coverage-card__text">
+            Global presence is defined by access, relationships, and execution — not by office locations.
+          </p>
+          </div>
+        
+        </article>
+      </div>
+
+      <img class="coverage__ship" src="images/luxury-cruise-ship-ocean.png" alt="" />
+    </div>
+  </div>
+</section>
+
+
+<section class="why" id="why">
+  <div class="container">
+    <h2 class="why__title">Why NVS</h2>
+
+    <div class="why__grid">
+      <article class="why-item">
+        <div class="why-item__icon">
+          <img src="./images/icons/why-clarity.svg" alt="" />
+        </div>
+        <div class="why-item__content">
+          <h3 class="why-item__title">Clarity</h3>
+          <p class="why-item__text">
+            We help clients navigate complexity and make well-grounded decisions without noise or pressure.
+          </p>
+        </div>
+      </article>
+
+      <article class="why-item">
+        <div class="why-item__icon">
+          <img src="./images/icons/why-trust.svg" alt="" />
+        </div>
+        <div class="why-item__content">
+          <h3 class="why-item__title">Trust</h3>
+          <p class="why-item__text">
+            Independent advice and transparent execution build strong, long-term client relationships.
+          </p>
+        </div>
+      </article>
+
+      <article class="why-item">
+        <div class="why-item__icon">
+          <img src="./images/icons/why-control.svg" alt="" />
+        </div>
+        <div class="why-item__content">
+          <h3 class="why-item__title">Control</h3>
+          <p class="why-item__text">
+            A structured approach and practical market knowledge ensure full control of the process at every stage.
+          </p>
+        </div>
+      </article>
+
+      <article class="why-item">
+        <div class="why-item__icon">
+          <img src="./images/icons/why-protect.svg" alt="" />
+        </div>
+        <div class="why-item__content">
+          <h3 class="why-item__title">Protecting Interests</h3>
+          <p class="why-item__text">
+            A calm, disciplined negotiation strategy focused on simplifying complexity and protecting our clients’ interests.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2 class="contacts__title">Contacts</h2>
+
+    <div class="contacts__grid">
+      <!-- LEFT CARD -->
+      <div class="contacts-card contacts-card--info">
+        <div class="contacts-card__overlay"></div>
+
+        <div class="contacts-card__content">
+          <p class="contacts__info-text">
+            Whether you are considering a transaction, reviewing strategic options,
+            or navigating a complex maritime situation, NVS is ready to engage.
+          </p>
+
+          <p class="contacts__info-text contacts__info-text--spaced">
+            Contact us to discuss your objectives.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT CARD (FORM) -->
+      <div class="contacts-card contacts-card--form">
+        <div class="contacts-card__overlay"></div>
+
+        <form class="contacts-form" id="contactForm" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="name">Your name</label>
+            <input class="form-input" id="name" name="name" type="text" autocomplete="name" />
+            <div class="form-error">Please enter your name</div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="email">Your email</label>
+            <input class="form-input" id="email" name="email" type="email" autocomplete="email" />
+            <div class="form-error">Please enter a valid email</div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="phone">Your phone</label>
+            <input class="form-input" id="phone" name="phone" type="tel" autocomplete="tel" />
+            <div class="form-error">Please enter a valid phone number</div>
+          </div>
+
+          <div class="contacts-form__bottom">
+            <label class="checkbox">
+              <input class="checkbox__input" id="agree" type="checkbox" />
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">
+                I agree with the terms of processing personal data
+              </span>
+            </label>
+
+            <button class="button contacts-form__submit" type="submit" disabled>
+              Send
+            </button>
+          </div>
+
+          <div class="contacts-form__status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <!-- LEFT: logo -->
+    <div class="footer__logo">
+      <img src="./images/logo.svg" alt="New Virtue Solutions" />
+    </div>
+
+    <!-- CENTER: policy + copyright -->
+    <div class="footer__center">
+      <a href="./personal-data-processing-policy.html" class="footer__policy">
+        Personal Data Processing Policy
+      </a>
+      <div class="footer__copyright">
+        © 2026 New Virtue Solutions. All rights reserved.
+      </div>
+    </div> 
+
+    <!-- RIGHT: social -->
+    <div class="footer__social">
+      <a href="#" class="footer__social-link" aria-label="Telegram">
+        <img src="./images/icons/telegram.svg" alt="" />
+      </a>
+      <a href="#" class="footer__social-link" aria-label="YouTube">
+        <img src="./images/icons/youtube.svg" alt="" />
+      </a>
+      <a href="#" class="footer__social-link" aria-label="Instagram">
+        <img src="./images/icons/instagram.svg" alt="" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+<div class="popup" id="successPopup" aria-hidden="true">
+  <div class="popup__overlay" data-popup-close></div>
+
+  <div class="popup__dialog" role="dialog" aria-modal="true" aria-labelledby="successPopupTitle">
+    <button class="popup__close" type="button" aria-label="Close" data-popup-close>✕</button>
+
+    <h3 class="popup__title" id="successPopupTitle">Message sent</h3>
+    <p class="popup__text">Thank you! We’ll get back to you soon.</p>
+
+    <button class="button popup__button" type="button" data-popup-close>OK</button>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+  ↑
+</button>
+
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+/* Fonts */
+$font-heading: "Poltawski Nowy", "Times New Roman", serif;
+$font-base: "Poppins", Arial, sans-serif;
+
+/* Font weights */
+$weight-light: 300;
+$weight-regular: 400;
+$weight-bold: 700;
+
+/* Layout */
+$container-width: 1200px;
+$container-padding: 16px;
+
+/* Breakpoints */
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+
+/* =========================
+   COLORS
+========================= */
+
+/* Backgrounds */
+$color-bg-main: #faf3f2;      // общий фон сайта
+$color-bg-dark: #0b2941;      // тёмный фон компонентов
+$color-bg-beige: #e7d7bd;     // бежевый фон компонентов
+$color-bg-light: #faf3f2;     // светлый фон компонентов (тот же, что и основной)
+
+/* Text */
+$color-text-primary: #0b2941; // основной текст
+$color-text-secondary: #e7d7bd;
+$color-white: #ffffff;
+
+/* Accent */
+$color-accent: #b08d4b;       // кнопки, active menu
