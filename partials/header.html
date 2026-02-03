@@ -1,0 +1,92 @@
+ <header class="site-header" id="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="site-header__logo" href="index.html" aria-label="Home">
+            <img
+              class="site-header__logo-image"
+              src="./images/logo.svg"
+              alt="NVS"
+            />
+          </a>
+
+          <!-- Desktop nav (как было) -->
+          <nav class="site-header__nav" aria-label="Main navigation">
+            <ul class="site-header__nav-list">
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="index.html">Home</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="services.html">Services</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="about-us.html">About Us</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="approach.html">Approach</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="Geography.html">Geography</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="Contacts.html">Contacts</a>
+              </li>
+            </ul>
+
+            <div class="site-header__actions">
+              <a class="site-header__icon-link" href="#" aria-label="Telegram">
+                <img src="./images/icons/icon-telegram-white.svg" alt="" />
+              </a>
+              <a class="site-header__icon-link" href="#" aria-label="WhatsApp">
+                <img src="./images/icons/icon-whatsapp-white.svg" alt="" />
+              </a>
+            </div>
+          </nav>
+
+          <!-- Mobile burger -->
+          <button
+            class="site-header__burger"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="site-header__burger-line"></span>
+            <span class="site-header__burger-line"></span>
+            <span class="site-header__burger-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile overlay + panel -->
+      <div class="site-header__overlay" data-menu-close></div>
+
+      <div class="site-header__panel" id="mobile-menu" aria-label="Mobile menu">
+        <button
+          class="site-header__close"
+          type="button"
+          aria-label="Close menu"
+          data-menu-close
+        >
+          <span class="site-header__close-line"></span>
+          <span class="site-header__close-line"></span>
+        </button>
+
+        <ul class="site-header__mobile-list">
+          <li><a class="site-header__mobile-link" href="index.html">Home</a></li>
+          <li><a class="site-header__mobile-link" href="services.html">Services</a></li>
+          <li><a class="site-header__mobile-link" href="about-us.html">About Us</a></li>
+          <li><a class="site-header__mobile-link" href="approach.html">Approach</a></li>
+          <li><a class="site-header__mobile-link" href="Geography.html">Geography</a></li>
+          <li><a class="site-header__mobile-link" href="Contacts.html">Contacts</a></li>
+        </ul>
+
+        <div class="site-header__mobile-actions">
+          <a class="site-header__icon-link" href="#" aria-label="Telegram">
+            <img src="./images/icons/icon-telegram-white.svg" alt="" />
+          </a>
+          <a class="site-header__icon-link" href="#" aria-label="WhatsApp">
+            <img src="./images/icons/icon-whatsapp-white.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
