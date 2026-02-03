@@ -1,6 +1,5 @@
 @use "variables";
 
-
 /* Background helpers */
 .bg-dark {
   background: variables.$color-bg-dark;
@@ -13,7 +12,6 @@
 .bg-light {
   background: variables.$color-bg-light;
 }
-
 
 .button {
   display: inline-flex;
@@ -32,7 +30,9 @@
   background: variables.$color-accent;
 
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
 
   &:hover {
     background: darken(variables.$color-accent, 6%);
@@ -43,7 +43,6 @@
   }
 }
 
-
 .menu__link {
   color: variables.$color-text-primary;
 
@@ -51,7 +50,6 @@
     color: variables.$color-accent;
   }
 }
-
 
 /* =========================
    HEADER (NVS)
@@ -116,7 +114,9 @@
     color: rgba(variables.$color-white, 0.9);
     background: transparent;
 
-    transition: background 0.2s ease, color 0.2s ease;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
 
     /* Hover state (like Services on mock) */
     &:hover {
@@ -202,21 +202,21 @@
 
     /* показываем бургер */
     &__burger {
-       display: inline-flex;
-  flex-direction: column;   
-  gap: 5px;                 
-  align-items: center;
-  justify-content: center;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
 
-  width: 52px;
-  height: 52px;
-  border-radius: 9999px;
+      width: 52px;
+      height: 52px;
+      border-radius: 9999px;
 
-  background: rgba(variables.$color-white, 0.12);
-  cursor: pointer;
+      background: rgba(variables.$color-white, 0.12);
+      cursor: pointer;
 
-  border: none;
-  padding: 0;
+      border: none;
+      padding: 0;
     }
 
     &__burger-line {
@@ -340,8 +340,6 @@
   overflow: hidden;
 }
 
-
-
 /* =========================
    HERO (HTML image version)
 ========================= */
@@ -356,12 +354,11 @@
   right: 0;
   bottom: 0;
 
-  width: 50vw;          /* половина экрана */
+  width: 50vw; /* половина экрана */
   min-width: calc(100vw - 600px); /* от правого края контейнера */
 
   overflow: hidden;
 }
-
 
 /* сама картинка */
 .hero__image {
@@ -408,7 +405,7 @@
   margin: 0 0 22px;
   font-family: variables.$font-base;
   font-weight: variables.$weight-light;
-  font-size: clamp(25px, 4vw, 37px);
+  font-size: clamp(25px, 3vw, 37px);
   line-height: 1.35;
   color: variables.$color-text-primary;
 }
@@ -427,41 +424,41 @@
 }
 
 @media (min-width: 1600px) {
-.hero {
-  min-height: 650px;
-}
+  .hero {
+    min-height: 650px;
+  }
 }
 
 /* Mobile ≤ 960 */
 @media (max-width: 959.98px) {
   .hero__media {
-    position: relative;
+    //position: relative;
     left: auto;
     right: auto;
-    height: 280px;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
   }
 
   .hero__media::before {
-    background: linear-gradient(
-      to bottom,
-      rgba(250, 243, 242, 0) 0%,
-      rgba(250, 243, 242, 1) 95%
-    );
+    background: rgba(variables.$color-bg-dark, 0.6);
+  }
+
+  .hero__title,
+  .hero__subtitle {
+    color: #fff;
   }
 
   .hero__inner {
     min-height: auto;
     padding: 34px 0 44px;
+    color: #fff;
   }
 
   .hero__content {
     max-width: 100%;
   }
 }
-
-
-
-
 
 /* =========================
    BENEFITS (4 cards)
@@ -487,13 +484,13 @@
 
   /* вертикальные разделители как на макете */
   border-right: 1px solid;
-border-image: linear-gradient(
-  to bottom,
-  rgba(133, 116, 70, 0) 0%,
-  rgba(133, 116, 70, 0.5) 50%,
-  rgba(133, 116, 70, 0) 100%
-) 1;
-
+  border-image: linear-gradient(
+      to bottom,
+      rgba(133, 116, 70, 0) 0%,
+      rgba(133, 116, 70, 0.5) 50%,
+      rgba(133, 116, 70, 0) 100%
+    )
+    1;
 
   &:last-child {
     border-right: none;
@@ -513,7 +510,6 @@ border-image: linear-gradient(
   margin-bottom: 14px;
 
   img {
-
     height: 28px;
     display: block;
   }
@@ -555,8 +551,6 @@ border-image: linear-gradient(
   }
 }
 
-
-
 /* =========================
    CTA FULL WIDTH
 ========================= */
@@ -596,23 +590,20 @@ border-image: linear-gradient(
 .cta__title {
   margin-bottom: 6px;
   color: variables.$color-white;
-  font-size: 50px;
+  font-size: clamp(32px, 4vw, 51px);
 }
 
 .cta__subtitle {
   margin-bottom: 28px;
-  font-size: 18px;
   line-height: 1.4;
   color: rgba(variables.$color-white, 0.9);
-  font-size: 30px;
+  font-size: clamp(25px, 3vw, 37px);
   font-weight: 200;
 }
 
 .cta__button {
   font-size: 20px; /*уже задано, но фиксируем */
 }
-
-
 
 /* =========================
    SERVICES (What We Do) - Slick
@@ -648,8 +639,8 @@ border-image: linear-gradient(
   flex-direction: column;
   height: 100%;
 
-  text-decoration: none;  /* убираем подчеркивание */
-  color: inherit;         /* чтобы текст не стал синим */
+  text-decoration: none; /* убираем подчеркивание */
+  color: inherit; /* чтобы текст не стал синим */
   cursor: pointer;
 }
 
@@ -664,9 +655,9 @@ border-image: linear-gradient(
     height: 100%;
     object-fit: cover;
     display: block;
-     transform: scale(1);
-  transition: transform 0.35s ease;
-  will-change: transform;
+    transform: scale(1);
+    transition: transform 0.35s ease;
+    will-change: transform;
   }
 }
 
@@ -702,7 +693,7 @@ border-image: linear-gradient(
   width: 46px;
   height: 46px;
   border-radius: 9999px;
-  background: rgba(variables.$color-bg-dark, 0.10);
+  background: rgba(variables.$color-bg-dark, 0.1);
   z-index: 2;
 
   &:hover {
@@ -735,14 +726,13 @@ border-image: linear-gradient(
   opacity: 0.85;
 }
 
-
 /* spacing 15px between cards */
 .services__slider {
-  margin: 0; 
+  margin: 0;
 }
 
 .services__slider .slick-slide {
-  padding: 0; 
+  padding: 0;
   margin-right: 15px;
 }
 
@@ -751,7 +741,6 @@ border-image: linear-gradient(
   margin-right: -15px;
   padding: 30px 0;
 }
-
 
 /* make all slides equal height */
 .service-card {
@@ -763,9 +752,6 @@ border-image: linear-gradient(
 .service-card__body {
   flex: 1; /* тело растягивается */
 }
-
-
-
 
 /* One breakpoint <= 960 */
 @media (max-width: 959.98px) {
@@ -793,9 +779,6 @@ border-image: linear-gradient(
     right: 0;
   }
 }
-
-
-
 
 /* =========================
    CASE BLOCK (image + 2 columns)
@@ -846,7 +829,6 @@ border-image: linear-gradient(
   align-items: center;
   justify-content: center;
 
-
   /* декоративный фон-сетка*/
   background: url("../images/grid-dark.png") left center / cover no-repeat;
 }
@@ -871,7 +853,6 @@ border-image: linear-gradient(
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .case-block__label {
@@ -942,8 +923,6 @@ border-image: linear-gradient(
   }
 }
 
-
-
 /* =========================
    OUR APPROACH
 ========================= */
@@ -964,14 +943,21 @@ border-image: linear-gradient(
   opacity: 0.55;
 
   background:
-    radial-gradient(1200px 240px at 60% 55%, rgba(11, 41, 65, 0.12), rgba(11, 41, 65, 0) 60%),
-    radial-gradient(900px 220px at 30% 70%, rgba(11, 41, 65, 0.10), rgba(11, 41, 65, 0) 60%);
+    radial-gradient(
+      1200px 240px at 60% 55%,
+      rgba(11, 41, 65, 0.12),
+      rgba(11, 41, 65, 0) 60%
+    ),
+    radial-gradient(
+      900px 220px at 30% 70%,
+      rgba(11, 41, 65, 0.1),
+      rgba(11, 41, 65, 0) 60%
+    );
 }
 .approach::before {
   background: url("../images/patterns/waves.png") center / cover no-repeat;
   opacity: 0.25;
 }
-
 
 .approach > .container {
   position: relative;
@@ -1078,8 +1064,6 @@ border-image: linear-gradient(
   }
 }
 
-
-
 /* =========================
    GLOBAL COVERAGE
 ========================= */
@@ -1129,7 +1113,6 @@ border-image: linear-gradient(
     inset: 0;
     background: url("../images/grid-dark.png") center / cover no-repeat;
     opacity: 0.7;
-
   }
 }
 
@@ -1184,9 +1167,9 @@ border-image: linear-gradient(
 .coverage__ship {
   position: absolute;
   left: 50%;
-      bottom: -13px;
-    transform: translateX(-50%);
-    width: 200px;
+  bottom: -13px;
+  transform: translateX(-50%);
+  width: 200px;
   height: auto;
   display: block;
   pointer-events: none;
@@ -1219,8 +1202,6 @@ border-image: linear-gradient(
     width: 110px;
   }
 }
-
-
 
 /* =========================
    WHY NVS
@@ -1309,7 +1290,6 @@ border-image: linear-gradient(
     height: 52px;
   }
 }
-
 
 /* =========================
    CONTACTS 
@@ -1546,9 +1526,9 @@ border-image: linear-gradient(
     gap: 16px;
   }
 
- // .contacts-card {
-    //min-height: auto;
- // }
+  // .contacts-card {
+  //min-height: auto;
+  // }
 
   .contacts-card__content,
   .contacts-form {
@@ -1565,7 +1545,6 @@ border-image: linear-gradient(
     align-items: flex-start;
   }
 }
-
 
 /* =========================
    POPUP (success)
@@ -1641,8 +1620,6 @@ border-image: linear-gradient(
   margin-top: 6px;
 }
 
-
-
 /* =========================
    FOOTER
 ========================= */
@@ -1703,7 +1680,9 @@ border-image: linear-gradient(
   align-items: center;
   justify-content: center;
 
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 
   img {
     width: 16px;
@@ -1728,8 +1707,6 @@ border-image: linear-gradient(
     order: 3;
   }
 }
-
-
 
 /* =========================
    SCROLL TO TOP BUTTON
