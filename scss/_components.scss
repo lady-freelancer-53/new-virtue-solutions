@@ -799,6 +799,22 @@
   background: variables.$color-bg-dark;
   overflow: hidden;
   box-shadow: 0 12px 28px rgba(variables.$color-bg-dark, 0.14);
+
+  &--light {
+    .case-block__right {
+       background: variables.$color-bg-beige;
+    }
+
+    .case-block__lead,
+    .case-block__right, .case-block__label, .case-block__list li, .case-block__list li::before, .case-block__note {
+      color: variables.$color-text-primary!important;
+    }
+
+    .case-block__left {
+
+    background: url(../images/grid-light.png) left center / cover no-repeat;
+}
+  }
 }
 
 /* Фото сверху на всю ширину */

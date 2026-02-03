@@ -848,6 +848,16 @@ p {
   overflow: hidden;
   box-shadow: 0 12px 28px rgba(11, 41, 65, 0.14);
 }
+.case-block__card--light .case-block__right {
+  background: #e7d7bd;
+}
+.case-block__card--light .case-block__lead,
+.case-block__card--light .case-block__right, .case-block__card--light .case-block__label, .case-block__card--light .case-block__list li, .case-block__card--light .case-block__list li::before, .case-block__card--light .case-block__note {
+  color: #0b2941 !important;
+}
+.case-block__card--light .case-block__left {
+  background: url(../images/grid-light.png) left center/cover no-repeat;
+}
 
 /* Фото сверху на всю ширину */
 .case-block__image {
