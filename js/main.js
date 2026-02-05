@@ -135,31 +135,7 @@ window.initApp = function () {
       }
     }
 
-    var $team = $(".js-team-slider");
-
-    if ($team.length) {
-      if (typeof $team.slick !== "function") {
-        console.error("Slick is not loaded");
-      } else if (!$team.hasClass("slick-initialized")) {
-        $team.slick({
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: false,
-          arrows: true,
-          dots: true,
-          speed: 300,
-          adaptiveHeight: true,
-          responsive: [
-            {
-              breakpoint: 960,
-              settings: {
-                slidesToShow: 1,
-              },
-            },
-          ],
-        });
-      }
-    }
+    
 
     // ===== Contact form =====
     (function () {
