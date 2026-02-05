@@ -1,120 +1,136 @@
 <section class="contacts" id="contacts">
-      <div class="container">
-        <h2 class="contacts__title">Contacts</h2>
+  <div class="container">
+    <h2 class="contacts__title">Contacts</h2>
 
-        <div class="contacts__grid">
-          <!-- LEFT CARD -->
-          <div class="contacts-card contacts-card--info">
-            <div class="contacts-card__overlay"></div>
+    <div class="contacts__grid">
+      <!-- LEFT CARD -->
+      <div class="contacts-card contacts-card--info">
+        <div class="contacts-card__overlay"></div>
 
-            <div class="contacts-card__content">
-              <p class="contacts__info-text">
-                Whether you are considering a transaction, reviewing strategic
-                options, or navigating a complex maritime situation, NVS is
-                ready to engage.
-              </p>
+        <div class="contacts-card__content">
+          <p class="contacts__info-text">
+            Whether you are considering a transaction, reviewing strategic
+            options, or navigating a complex maritime situation, NVS is ready to
+            engage.
+          </p>   
 
-              <p class="contacts__info-text contacts__info-text--spaced">
-                Contact us to discuss your objectives.
-              </p>
+          <div class="contacts-info">
+            <div class="contacts-info__item">
+              <span class="contacts-info__label">Address:</span>
+              <span class="contacts-info__value contacts__info-text ">Glyfada, Greece</span>
             </div>
-          </div>
 
-          <!-- RIGHT CARD (FORM) -->
-          <div class="contacts-card contacts-card--form">
-            <div class="contacts-card__overlay"></div>
+            <div class="contacts-info__item">
+              <span class="contacts-info__label">Email:</span>
+              <a href="mailto:info@nvs.pro" class="contacts-info__value contacts__info-text ">
+                info@nvs.pro
+              </a>
+            </div>
 
-            <form class="contacts-form" id="contactForm" novalidate>
-              <div class="form-field">
-                <label class="form-label" for="name">Your name</label>
-                <input
-                  class="form-input"
-                  id="name"
-                  name="name"
-                  type="text"
-                  autocomplete="name"
-                />
-                <div class="form-error">Please enter your name</div>
-              </div>
-
-              <div class="form-field">
-                <label class="form-label" for="email">Your email</label>
-                <input
-                  class="form-input"
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                />
-                <div class="form-error">Please enter a valid email</div>
-              </div>
-
-              <div class="form-field">
-                <label class="form-label" for="phone">Your phone</label>
-                <input
-                  class="form-input"
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  autocomplete="tel"
-                />
-                <div class="form-error">Please enter a valid phone number</div>
-              </div>
-
-              <div class="contacts-form__bottom">
-                <label class="checkbox">
-                  <input class="checkbox__input" id="agree" type="checkbox" />
-                  <span class="checkbox__box"></span>
-                  <span class="checkbox__text">
-                    I agree with the terms of processing personal data
-                  </span>
-                </label>
-
-                <button
-                  class="button contacts-form__submit"
-                  type="submit"
-                  disabled
-                >
-                  Send
-                </button>
-              </div>
-
-              <div
-                class="contacts-form__status"
-                role="status"
-                aria-live="polite"
-              ></div>
-            </form>
+            <div class="contacts-info__item">
+              <span class="contacts-info__label">Phone:</span>
+              <a href="tel:+300000000000" class="contacts-info__value contacts__info-text ">
+                +30 000 000 0000
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    
+      <!-- RIGHT CARD (FORM) -->
+      <div class="contacts-card contacts-card--form">
+        <div class="contacts-card__overlay"></div>
 
-    <div class="popup" id="successPopup" aria-hidden="true">
-      <div class="popup__overlay" data-popup-close></div>
+        <form class="contacts-form" id="contactForm" novalidate>
+            
+        <p class="contacts__info-text contacts__info-text--spaced">
+            Contact us to discuss your objectives.
+        </p>
+          
+          <div class="form-field">
+            <label class="form-label" for="name">Your name</label>
+            <input
+              class="form-input"
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+            />
+            <div class="form-error">Please enter your name</div>
+          </div>
 
-      <div
-        class="popup__dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="successPopupTitle"
-      >
-        <button
-          class="popup__close"
-          type="button"
-          aria-label="Close"
-          data-popup-close
-        >
-          ✕
-        </button>
+          <div class="form-field">
+            <label class="form-label" for="email">Your email</label>
+            <input
+              class="form-input"
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+            />
+            <div class="form-error">Please enter a valid email</div>
+          </div>
 
-        <h3 class="popup__title" id="successPopupTitle">Message sent</h3>
-        <p class="popup__text">Thank you! We’ll get back to you soon.</p>
+          <div class="form-field">
+            <label class="form-label" for="phone">Your phone</label>
+            <input
+              class="form-input"
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+            />
+            <div class="form-error">Please enter a valid phone number</div>
+          </div>
 
-        <button class="button popup__button" type="button" data-popup-close>
-          OK
-        </button>
+          <div class="contacts-form__bottom">
+            <label class="checkbox">
+              <input class="checkbox__input" id="agree" type="checkbox" />
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">
+                I agree with the terms of processing personal data
+              </span>
+            </label>
+
+            <button class="button contacts-form__submit" type="submit" disabled>
+              Send
+            </button>
+          </div>
+
+          <div
+            class="contacts-form__status"
+            role="status"
+            aria-live="polite"
+          ></div>
+        </form>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="popup" id="successPopup" aria-hidden="true">
+  <div class="popup__overlay" data-popup-close></div>
+
+  <div
+    class="popup__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="successPopupTitle"
+  >
+    <button
+      class="popup__close"
+      type="button"
+      aria-label="Close"
+      data-popup-close
+    >
+      ✕
+    </button>
+
+    <h3 class="popup__title" id="successPopupTitle">Message sent</h3>
+    <p class="popup__text">Thank you! We’ll get back to you soon.</p>
+
+    <button class="button popup__button" type="button" data-popup-close>
+      OK
+    </button>
+  </div>
+</div>

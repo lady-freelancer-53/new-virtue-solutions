@@ -72,8 +72,9 @@ window.initApp = function () {
     //активная ссылка меню в хедер
     function initActiveMenu() {
       const currentPath =
-  window.location.pathname.replace(/\/$/, "").split("/").pop() || "index.html";
-  
+        window.location.pathname.replace(/\/$/, "").split("/").pop() ||
+        "index.html";
+
       document.querySelectorAll(".site-header__nav-link").forEach((link) => {
         const href = link.getAttribute("href");
         console.log(href);
@@ -134,7 +135,33 @@ window.initApp = function () {
       }
     }
 
-    // ===== Contact form (оставляю твой код как есть) =====
+    var $team = $(".js-team-slider");
+
+    if ($team.length) {
+      if (typeof $team.slick !== "function") {
+        console.error("Slick is not loaded");
+      } else if (!$team.hasClass("slick-initialized")) {
+        $team.slick({
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: false,
+          arrows: true,
+          dots: true,
+          speed: 300,
+          adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 960,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      }
+    }
+
+    // ===== Contact form =====
     (function () {
       const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
       const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
